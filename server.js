@@ -51,12 +51,12 @@ const bookSchema = new mongoose.Schema({
             {
                 name: 'Living in the Light: A guide to personal transformation',
                 description : 'n Living in the Light, Shakti Gawain introduced a powerful new way of life: that of listening to one\'s own intuition and relying on it ',
-                url:'https://en.frenchpdf.com/wp-content/uploads/2019/03/Living-in-the-Light-PDF-EnglishPDF.jpg'
+                url:'https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'
             },
             {
                 name: 'Give and Take: WHY HELPING OTHERS DRIVES OUR SUCCESS',
                 description : 'An innovative, groundbreaking book that will captivate readers of Malcolm Gladwell, Daniel Pink, The Power of Habit, and Quiet For generations, we have focused on the individual drivers of success: passion, hard work, talent, and luck. But today, success is increasingly dependent on',
-                url:'https://images-na.ssl-images-amazon.com/images/I/716GAFqLLOL.jpg'
+                url:'https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'
             }
         ]
 
@@ -83,8 +83,8 @@ function bookHandler(req,res){
         }
         else
         {
-            res.send(userData[0].books);
-            // console.log(userData[0].books);
+            res.send(userData[6].books);
+            console.log(userData[6].books);
 
         }
     })
