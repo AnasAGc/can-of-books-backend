@@ -8,8 +8,10 @@ const mongoose = require('mongoose');
 app.use(cors());
 
 app.get('/',homeHandler);
+const MONGODB=process.env.MONGODB_URI
 
-mongoose.connect('mongodb://localhost:27017/myfavariteBook', {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect('mongodb://localhost:27017/myfavariteBook', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(MONGODB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const bookSchema = new mongoose.Schema({
     name:  String,
@@ -83,8 +85,8 @@ function bookHandler(req,res){
         }
         else
         {
-            res.send(userData[6].books);
-            console.log(userData[6].books);
+            res.send(userData[0].books);
+            console.log(userData[0].books);
 
         }
     })
