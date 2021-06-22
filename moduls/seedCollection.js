@@ -1,8 +1,14 @@
 'use strict'
 const mongoose = require('mongoose');
-module.exports=bookHandler;
-
-
+module.exports = {
+    bookHandler,
+    homeHandler,
+    handleAddBook,
+    handleDeleteBook,
+};
+function homeHandler(req,res){
+    res.send('Home Route');
+}
 // http://localhost:3016/book?email=anas19971114@gmail.com
 function bookHandler(req,res){
     let emailForBook=req.query.email;
