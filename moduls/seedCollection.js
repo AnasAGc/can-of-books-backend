@@ -1,9 +1,9 @@
 'use strict'
 const mongoose = require('mongoose');
-
 module.exports=bookHandler;
 
 
+// http://localhost:3016/book?email=anas19971114@gmail.com
 function bookHandler(req,res){
     let emailForBook=req.query.email;
 
@@ -18,7 +18,6 @@ function bookHandler(req,res){
 
         }
     })
-    // console.log(email);
 
 }
 
@@ -36,7 +35,6 @@ const bookSchema = new mongoose.Schema({
     books: [bookSchema]
   });
 
-//   const myBookModle = mongoose.model('Book', bookSchema);
   const myEmailModle = mongoose.model('Email', emailShema);
 
   
@@ -82,7 +80,6 @@ const bookSchema = new mongoose.Schema({
 // seedOwnerCollection ();
 
 
-// app.get('/',homeHandler);
 
-// http://localhost:3016/book?email=anas19971114@gmail.com
+
 
